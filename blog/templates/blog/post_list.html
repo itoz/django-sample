@@ -10,6 +10,22 @@
     <h1>
         post list
     </h1>
+
     
+    <ul>
+        {% for post in posts %}
+        <li>
+            <div>
+                {{ post.title }}
+            </div>
+            <div>
+                {{ post.text|linebreaksbr }}
+            </div>
+            <div>
+                {{ post.created_date }}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
